@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurante Promises</title>
+  <meta name="description" content="Simulação de pedidos com JavaScript e Promises." />
+  <link rel="stylesheet" href="{{ url_for('static', filename='/../../static/css/style.css')}}" />
+</head>
+
+<body>
+  <header class="header">
+    <div>
+    </div>
+    <nav>
+      <ul class="header-menu">
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="introducao" id="cardapio">
+    <img src="{{ url_for('static', filename='img/chef.png') }}" alt="Chef" width="360" height="360" onerror="this.style.display='none'" />
+    <div>
+      <h1>Restaurante do Chef</h1>
+      <p>Um restaurante fictício com finalidade de aprendizagem de flask, html, css e JavaScript</p>
+    </div>
+  </main>
+
+  <section class="experiencia" id="experiencia" aria-label="Experiência">
+    <div class="parent">
+
+      <div class="div1">
+        <h2 class="subtitulo">CARDÁPIO</h2>
+      </div>
+
+      <div class="div2">
+        <img src="{{ url_for('static', filename='img/Pizza.jpg') }}" alt="Pizza" width="300" height="180" />
+      </div>
+
+      <div class="div3">
+        <div class="item" onclick="fazerPedido('Pizza')" style="cursor:pointer;">
+          <h3>Pizza</h3>
+          <p>Feita na hora, crocante e saborosa</p>
+        </div>
+      </div>
+
+      <div class="div4">
+        <img src="{{ url_for('static', filename='img/hamburguer.jpg') }}" alt="Hambúrguer" width="300" height="180" />
+      </div>
+
+      <div class="div5">
+        <div class="item" onclick="fazerPedido('Hamburguer')" style="cursor:pointer;">
+          <h3>Hambúrguer</h3>
+          <p>Suculento, com queijo derretido</p>
+        </div>
+      </div>
+
+      <div class="div6">
+        <img src="{{ url_for('static', filename='img/batata_frita.jpeg') }}" alt="Batata Frita" width="300" height="180" />
+      </div>
+
+      <div class="div7">
+        <div class="item" onclick="fazerPedido('Batata Frita')" style="cursor:pointer;">
+          <h3>Batata Frita</h3>
+          <p>Crocante e sequinha</p>
+        </div>
+      </div>
+
+      <div class="div8">
+        <img src="{{ url_for('static', filename='img/sorvete.jpeg') }}" alt="Sorvete" width="300" height="180" />
+      </div>
+
+      <div class="div9">
+        <div class="item" onclick="fazerPedido('Sorvete')" style="cursor:pointer;">
+          <h3>Sorvete</h3>
+          <p>Refrescante e cremoso</p>
+        </div>
+      </div>
+
+      <div class="div10">
+        <img src="{{ url_for('static', filename='img/refrigerante.jpeg') }}" alt="Refrigerante" width="300" height="180" />
+      </div>
+
+      <div class="div11">
+        <div class="item" onclick="fazerPedido('Refrigerante')" style="cursor:pointer;">
+          <h3>Refrigerante</h3> 
+          <p>Geladinho e refrescante</p>
+        </div>
+      </div>
+
+      <div class="div12">
+        <img src="{{ url_for('static', filename='img/agua.jpeg') }}" alt="Água" width="300" height="180" />
+      </div>
+
+      <div class="div13">
+        <div class="item" onclick="fazerPedido('Água')" style="cursor:pointer;">
+          <h3>Água</h3>
+          <p>Pura e saudável</p>
+        </div>
+</div>
+
+
+    </div>
+      <div id="status" class="status esperando" style="margin-top: 20px; text-align: center;">
+        Aguardando pedido...
+      </div>
+  </section>
+
+  <section id="sobre" class="introducao">
+    <div>
+      <h2>Sobre</h2>
+    </div>
+    <div>
+      <p>Este projeto foi criado para demonstrar o uso de <strong>Promises</strong> em JavaScript simulando o preparo de pedidos de um restaurante.</p>
+    </div>
+  </section>
+
+  <footer class="footer" id="contato">
+    <div class="footer-container">
+      <ul class="footer-contato">
+        <li>Rua do Sabor, 123 - Centro Gastronômico</li>
+        <li>+55 11 0000-0000</li>
+        <li><a href="#">@restaurante_do_chef</a></li>
+      </ul>
+      <div class="footer-textos">
+        <p class="footer-texto">Estudos, comida e criatividade.</p>
+        <p class="footer-copy">© 2025 Restaurante do Chef — persistência acima de tudo.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</html>
