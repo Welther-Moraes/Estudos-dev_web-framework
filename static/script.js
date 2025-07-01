@@ -1,5 +1,3 @@
-// static/script.js
-
 function logStatus(msg) {
   const statusDiv = document.getElementById('status');
   statusDiv.textContent = msg;
